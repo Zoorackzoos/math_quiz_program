@@ -1,0 +1,56 @@
+#Calc3Exam2StudyGuideModule.kv
+
+#:import LatexLabel GUI_sub_files.Calc3Exam2StudyGuideModule_folder.latex_widget.LatexLabel
+
+<Calc3Exam2StudyGuideModule>:
+    name: "Calc3Exam2StudyGuideModule"
+    ScreenManager:
+        Questions:
+            name: "Questions"
+
+<Questions>:
+    #this is the background
+    canvas.before:
+        Color:
+            rgba: (0.5, 0.3, 0.0, 1.0)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: "vertical"
+        #padding: 20
+        #spacing: 20
+        #this is the screen header.
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: 0.05
+            Label:
+                text: "Questions"
+                font_size: app.universal_font_size / 1.5
+            Button:
+                text: "go back to main menu"
+                font_size: app.universal_font_size / 1.5
+                on_press:
+                    app.root.transition.direction = 'right'
+                    app.root.current = 'MainMenuModule'
+        #this is a tab system.
+        TabbedPanel:
+            do_default_tab: False
+            TabbedPanelItem:
+                text: "TEST"
+                BoxLayout:
+                    orientation: "vertical"
+                    LatexLabel:
+                        latex_string: r"\frac{d}{dx}(x^2) = 2x"
+            TabbedPanelItem:
+                text: "TEST"
+                BoxLayout:
+                    orientation: "vertical"
+                    LatexLabel:
+                        latex_string: r"\nabla f = \langle f_x, f_y, f_z \rangle"
+            TabbedPanelItem:
+                text: "TEST"
+                BoxLayout:
+                    orientation: "vertical"
+                    LatexLabel:
+                        latex_string: r"\int_0^{\pi} \sin(x)\, dx = 2"

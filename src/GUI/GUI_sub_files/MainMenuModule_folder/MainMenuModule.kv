@@ -1,0 +1,27 @@
+<MainMenuModule>:
+    name: 'MainMenuModule'
+    ScreenManager:
+        MainMenuScreen:
+            name: 'MainMenuScreen'
+
+<MainMenuScreen>:
+    canvas.before:
+        Color:
+            rgba: (0.5, 0.0, 0.0, 1.0)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 20
+        Label:
+            text: "Math Quiz Program - Main Menu"
+            font_size: app.universal_font_size
+        Button:
+            text: "select calc 3 - exam 2 - study guide"
+            font_size: app.universal_font_size
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'Calc3Exam2StudyGuideModule'
+
