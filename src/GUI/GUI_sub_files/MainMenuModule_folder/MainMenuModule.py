@@ -2,6 +2,9 @@ from kivy.core.window import Window
 from kivy.modules import inspector
 from kivy.uix.screenmanager import Screen
 
+"""
+i have this in camelCase because the kivy naming conventions are that way.
+"""
 class MainMenuModule(Screen):
 
     def build(self):

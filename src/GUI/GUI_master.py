@@ -19,7 +19,7 @@ Builder.load_file(''
                   '')
 
 class TotalProgramMainApp(App):
-    universal_font_size = NumericProperty(50)
+    universal_font_size = NumericProperty(40)
 
     def build(self):
         root = ScreenManager()
