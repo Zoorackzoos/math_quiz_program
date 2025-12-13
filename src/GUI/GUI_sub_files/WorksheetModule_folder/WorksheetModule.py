@@ -10,5 +10,9 @@ class WorksheetModule(Screen):
         inspector.create_inspector(Window, self)
         # return Builder.load_file("navigation.kv")
 
+    def testingFunction(self):
+        print("WorksheetModule -> testingFunction")
+
 class Questions(Screen):
-    pass
+    def testingFunction(self):
+        print("Questions -> testingFunction")
