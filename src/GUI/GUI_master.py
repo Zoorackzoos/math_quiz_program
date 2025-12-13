@@ -7,15 +7,14 @@ from kivy.uix.screenmanager import ScreenManager
 from kivy.core.window import Window
 from kivy.modules import inspector
 
-from src.GUI.GUI_sub_files.Calc3Exam2StudyGuideModule_folder.Calc3Exam2StudyGuideModule import *
+from src.GUI.GUI_sub_files.WorksheetModule_folder.WorksheetModule import *
 from src.GUI.GUI_sub_files.MainMenuModule_folder.MainMenuModule import *
 
 #load kivy files using Builder so this file "total_program_main" can read them
 Builder.load_file(''
                   'GUI_sub_files/MainMenuModule_folder/MainMenuModule.kv'
                   '')
-Builder.load_file(''
-                  'GUI_sub_files/Calc3Exam2StudyGuideModule_folder/Calc3Exam2StudyGuideModule.kv'
+Builder.load_file('GUI_sub_files/WorksheetModule_folder/WorksheetModule.kv'
                   '')
 
 class TotalProgramMainApp(App):
@@ -28,7 +27,7 @@ class TotalProgramMainApp(App):
         inspector.create_inspector(Window, self)
 
         root.add_widget(MainMenuModule())
-        root.add_widget(Calc3Exam2StudyGuideModule())
+        root.add_widget(WorksheetModule())
 
         root.current = 'MainMenuModule'
         return root
