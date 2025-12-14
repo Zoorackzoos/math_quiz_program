@@ -20,6 +20,8 @@ Builder.load_file('GUI_sub_files/WorksheetModule_folder/WorksheetModule.kv'
 class TotalProgramMainApp(App):
     universal_font_size = NumericProperty(40)
 
+    current_worksheet = StringProperty("")
+
     def build(self):
         root = ScreenManager()
 
