@@ -6,7 +6,6 @@ from kivy.core.image import Image as CoreImage
 from kivy.properties import StringProperty
 
 """
-this is black box as fuck. 
 it's a image overwrite class that's taking in LaTex code thru the kivy file
 and then it turns it into a image via this.
 """
