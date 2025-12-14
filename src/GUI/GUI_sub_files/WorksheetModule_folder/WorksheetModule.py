@@ -7,6 +7,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.tabbedpanel import TabbedPanelItem
 
 from src.GUI.GUI_sub_files.WorksheetModule_folder.latex_widget import *
+from src.logic.question_variables.testing_module_questions import testing_module_questions
 
 class WorksheetModule(Screen):
     def build(self):
@@ -24,20 +25,7 @@ class WorksheetModule(Screen):
             self.load_testing_module()
 
     def load_testing_module(self):
-        questions = [
-            {
-                "title": "Q1",
-                "latex": r"\frac{d}{dx}(x^2)",
-                "answer": "2x"
-            },
-            {
-                "title": "Q2",
-                "latex": r"\nabla f",
-                "answer": "<fx, fy, fz>"
-            }
-        ]
-
-        self.ids.questions_screen.populate_questions(questions)
+        self.ids.questions_screen.populate_questions(testing_module_questions)
 
 class Questions(Screen):
     def testingFunction(self):
