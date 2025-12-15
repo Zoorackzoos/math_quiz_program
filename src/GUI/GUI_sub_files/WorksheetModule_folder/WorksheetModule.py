@@ -32,8 +32,11 @@ class WorksheetModule(Screen):
         self.ids.questions_screen.populate_questions(testing_module_questions)
 
 class Questions(Screen):
-    def testingFunction(self):
-        print("Questions -> testingFunction -> "+self.ids.answer_text_id.text)
+    def previewTest(self):
+        print("Questions -> previewTest -> self.ids.answer_text_id.text = "+self.ids.answer_text_id.text)
+
+    def checkTest(self):
+        print("Questions -> checkTest -> self.ids.answer_text_id.text = "+self.ids.answer_text_id.text)
 
     def populate_questions(self, questions):
         print("Questions -> populate_questions")
