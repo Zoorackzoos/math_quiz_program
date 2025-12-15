@@ -27,10 +27,10 @@
             size_hint_y: 0.05
             Label:
                 text: "Questions"
-                font_size: app.universal_font_size / 1.5
+                font_size: app.universal_font_size_app_variable / 1.5
             Button:
                 text: "go back to main menu"
-                font_size: app.universal_font_size / 1.5
+                font_size: app.universal_font_size_app_variable / 1.5
                 on_press:
                     app.root.transition.direction = 'right'
                     app.root.current = 'MainMenuModule'

@@ -9,6 +9,7 @@ from kivy.modules import inspector
 
 from src.GUI.GUI_sub_files.WorksheetModule_folder.WorksheetModule import *
 from src.GUI.GUI_sub_files.MainMenuModule_folder.MainMenuModule import *
+from src.GUI.universal_GUI_variables import universal_font_size_numeric_property
 
 #load kivy files using Builder so this file "total_program_main" can read them
 Builder.load_file(''
@@ -17,8 +18,9 @@ Builder.load_file(''
 Builder.load_file('GUI_sub_files/WorksheetModule_folder/WorksheetModule.kv'
                   '')
 
+
 class TotalProgramMainApp(App):
-    universal_font_size = NumericProperty(40)
+    universal_font_size_app_variable = universal_font_size_numeric_property
 
     current_worksheet = StringProperty("")
 
