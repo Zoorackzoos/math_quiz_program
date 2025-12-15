@@ -6,7 +6,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen
 from kivy.uix.tabbedpanel import TabbedPanelItem
 
-from src.GUI.GUI_sub_files.WorksheetModule_folder.latex_widget import *
+from src.GUI.GUI_sub_files.WorksheetModule_folder.latex_widget_folder.latex_widget import *
 from src.logic.question_variables.testing_module_questions import testing_module_questions
 
 class WorksheetModule(Screen):
