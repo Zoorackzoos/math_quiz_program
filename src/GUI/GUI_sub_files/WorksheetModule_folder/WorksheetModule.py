@@ -1,5 +1,4 @@
 #WorksheetModule.py
-import math
 
 from kivy.app import App
 from kivy.core.window import Window
@@ -10,7 +9,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.tabbedpanel import TabbedPanelItem
 
 from src.GUI.GUI_sub_files.WorksheetModule_folder.latex_widget_folder.latex_widget import *
-from src.GUI.universal_GUI_variables import universal_font_size_int, universal_font_size_numeric_property
+from src.GUI.GUI_variables.universal_GUI_variables import universal_font_size_int
 from src.logic.question_variables.testing_module_questions import testing_module_questions
 
 class WorksheetModule(Screen):

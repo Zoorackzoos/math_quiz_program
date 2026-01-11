@@ -1,5 +1,6 @@
 #testing_module_questions.py
-testing_module_questions = [
+testing_module_questions = \
+[
     {
         "title": "Q1",
         "instructions": "find the derivative of the following function",
