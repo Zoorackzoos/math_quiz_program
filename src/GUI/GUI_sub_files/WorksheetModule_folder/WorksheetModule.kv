@@ -35,13 +35,13 @@
                     app.root.transition.direction = 'right'
                     app.root.current = 'MainMenuModule'
         #this is a tab system.
-        TabbedPanel:
+        QuestionsTabbedPanel:
             do_default_tab: False
             id: question_tabs
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: 0.1
-            TextInput:
+            UserAnswerTextInput:
                 size_hint_x: 0.6
                 id: answer_text_id
                 hint_text: 'answer here :DDD'

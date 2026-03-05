@@ -15,7 +15,8 @@ from src.GUI.universal_GUI_variables import universal_font_size_numeric_property
 Builder.load_file(''
                   'GUI_sub_files/MainMenuModule_folder/MainMenuModule.kv'
                   '')
-Builder.load_file('GUI_sub_files/WorksheetModule_folder/WorksheetModule.kv'
+Builder.load_file(''
+                  'GUI_sub_files/WorksheetModule_folder/WorksheetModule.kv'
                   '')
 
 

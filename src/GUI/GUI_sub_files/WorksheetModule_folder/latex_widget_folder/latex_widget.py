@@ -1,15 +1,19 @@
-# latex_widget.py
+"""
+latex_widget.py
+"""
 import io
 import matplotlib.pyplot as plt
 from kivy.uix.image import Image
 from kivy.core.image import Image as CoreImage
 from kivy.properties import StringProperty
 
-"""
-it's a image overwrite class that's taking in LaTex code thru the kivy file
-and then it turns it into a image via this.
-"""
 class LatexLabel(Image):
+    """
+    it's a image overwrite class that's taking in LaTex code thru the kivy file
+    and then it turns it into a image via this.
+
+    kivy_class : Image
+    """
     latex_string = StringProperty("")
 
     def __init__(self, **kwargs):

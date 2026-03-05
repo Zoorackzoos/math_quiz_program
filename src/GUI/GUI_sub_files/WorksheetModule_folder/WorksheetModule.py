@@ -1,5 +1,11 @@
-#WorksheetModule.py
+"""
+WorksheetModule.py
+
+this is where questions & answers are administrated based on each test / quiz.
+"""
 import math
+from asyncio.windows_events import NULL
+from logging import root
 
 from kivy.app import App
 from kivy.core.window import Window
@@ -8,6 +14,10 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import Screen
 from kivy.uix.tabbedpanel import TabbedPanelItem
+from kivy.uix.textinput import TextInput
+from sqlalchemy import null, Null
+from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
+
 
 from src.GUI.GUI_sub_files.WorksheetModule_folder.latex_widget_folder.latex_widget import *
 from src.GUI.universal_GUI_variables import universal_font_size_int, universal_font_size_numeric_property
@@ -31,7 +41,12 @@ class WorksheetModule(Screen):
     def load_testing_module(self):
         self.ids.questions_screen.populate_questions(testing_module_questions)
 
+# this populates based on the question amount.
+# we have this so when the user goes from problem to problem, their inputs save.
+user_inputted_answers = []
+
 class Questions(Screen):
+
     def previewTest(self):
         print("Questions -> previewTest -> self.ids.answer_text_id.text = "+self.ids.answer_text_id.text)
 
@@ -39,6 +54,12 @@ class Questions(Screen):
         print("Questions -> checkTest -> self.ids.answer_text_id.text = "+self.ids.answer_text_id.text)
 
     def populate_questions(self, questions):
+        """
+
+        :param questions: from src/logic/question_variables .
+                it's a list that contains sets, each set is a question.
+        :return: adds question widgets to the tabbed panel widget
+        """
         print("Questions -> populate_questions")
         print("\tself.ids = \t\t\t", self.ids)
 
@@ -81,3 +102,23 @@ class Questions(Screen):
 
             tab.add_widget(box)
             tabs.add_widget(tab)
+
+            # TODO: refactor user_inputted_answer's temp NULL value a real null value instead of a string.
+            user_inputted_answers.append("NULL")
+
+
+class QuestionsTabbedPanel(TabbedPanel):
+    def __init__(self, **kwargs):
+        super(QuestionsTabbedPanel, self).__init__(**kwargs)
+        # Bind the function to the 'current_tab' property
+        self.bind(current_tab=self.on_tab_change)
+
+    def on_tab_change(self, instance, new_tab):
+        # Triggered when tab changes. 'new_tab' is the new tab item.
+        print(f"Tab changed to: {new_tab.text}")
+
+class UserAnswerTextInput(TextInput):
+    def keyboard_on_key_down(self, window, keycode, text, modifiers):
+        print("UserAnswerTextInput -> keyboard_on_key_down -> self.text: ")
+        print("\t",self.text)
+        return super().keyboard_on_key_down(window, keycode, text, modifiers)

@@ -10,8 +10,19 @@
 this program's job is to mimic quizlet or webwork but with kivy and python instead.  
 
 # useful links
+
 ## github repo link 
-put this later
+https://github.com/Zoorackzoos/math_quiz_program
+
+## design doc
+https://docs.google.com/document/d/1zBRpkKCJK8A2hu6dSd9rOtjoeuYnwPgb4tJTkRei9Iw/edit?usp=sharing
+
+# how run in PyCharm
+go to:
+```terminaloutput
+src/GUI/GUI_master.py
+```
+and run it there. 
 
 # credits
 duncan holmes
