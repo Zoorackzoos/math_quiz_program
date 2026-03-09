@@ -1,7 +1,7 @@
 """
+GUI_master.py
 GUI master doesn't do a lot other than build the app. It's like rendering it.
 """
-#GUI_master.py
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
 

@@ -20,8 +20,9 @@ from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
 
 
 from src.GUI.GUI_sub_files.WorksheetModule_folder.latex_widget_folder.latex_widget import *
-from src.GUI.universal_GUI_variables import universal_font_size_int, universal_font_size_numeric_property
+from src.GUI.GUI_variables.universal_GUI_variables import universal_font_size_int, universal_font_size_numeric_property
 from src.logic.question_variables.testing_module_questions import testing_module_questions
+from src.GUI.GUI_master import TotalProgramMainApp
 
 class WorksheetModule(Screen):
     def build(self):
@@ -44,6 +45,30 @@ class WorksheetModule(Screen):
 # this populates based on the question amount.
 # we have this so when the user goes from problem to problem, their inputs save.
 user_inputted_answers = []
+
+def update_user_inputted_answers(user_answer, tab_amount="\t"):
+    print(tab_amount,"update_user_inputted_answers")
+    tab_amount += "\t"
+    """
+     TODO: implement a algorithm that gets question_integer based off of a title.
+     you would fetch the title, then search thru a question list variable
+      to see which question matched the title, then with that instance
+      find it's "question_integer" value
+      """
+    total_program_screen_manager = TotalProgramMainApp.get_running_app().root
+    worksheet_screen = total_program_screen_manager.get_screen("WorksheetModule")
+    question_integer = TotalProgramMainApp.get_running_app().root.ids
+
+    print(tab_amount,"worksheet_screen.ids : ",worksheet_screen.ids)
+    print(tab_amount,"worksheet_screen.ids.questions_screen : ",worksheet_screen.ids.questions_screen)
+    print(tab_amount,"worksheet_screen.ids.questions_screen.ids : ",worksheet_screen.ids.questions_screen.ids)
+
+
+
+    #user_inputted_answers[question_integer] = user_answer
+    #print(tab_amount,"user_expected_answers:")
+    #tab_amount += "\t"
+    #print("\n",user_inputted_answers)
 
 class Questions(Screen):
 
@@ -121,4 +146,5 @@ class UserAnswerTextInput(TextInput):
     def keyboard_on_key_down(self, window, keycode, text, modifiers):
         print("UserAnswerTextInput -> keyboard_on_key_down -> self.text: ")
         print("\t",self.text)
+        update_user_inputted_answers(self.text)
         return super().keyboard_on_key_down(window, keycode, text, modifiers)

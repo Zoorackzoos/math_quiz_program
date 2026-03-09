@@ -14,7 +14,7 @@ you need
 testing_module_questions = [
     {
         "question integer": 1,
-        "title": "Q1",
+        "title": "1",
         "instructions": "find the derivative of the following function",
         "latex": r"\frac{d}{dx} x^2 = ?",
         "answer": "2x",
@@ -22,7 +22,7 @@ testing_module_questions = [
     },
     {
         "question integer": 2,
-        "title": "Q2",
+        "title": "2",
         "instructions": "Evaluate the following function",
         "latex": r"\int_{0}^{\pi} \sin x = ?",
         "answer": "2",
@@ -30,7 +30,7 @@ testing_module_questions = [
     },
     {
         "question integer": 3,
-        "title": "Q3",
+        "title": "3",
         "instructions": "Evaluate the following function",
         "latex": r"\sum_{n=1}^{\infty} \frac{1}{n^2} = ?",
         "answer": "pi^2/6",
@@ -38,7 +38,7 @@ testing_module_questions = [
     },
     {
         "question integer": 4,
-        "title": "Q4",
+        "title": "4",
         "instructions": "Parametrize the following functions in respect of x,y and z.",
         "latex": r"\nabla f = ?",
         "answer": "<f_x, f_y, f_z>",
@@ -46,7 +46,7 @@ testing_module_questions = [
     },
     {
         "question integer": 5,
-        "title": "Q5",
+        "title": "5",
         "instructions": "If this equation represents a cone, what would it be equal to?",
         "latex": r"\sqrt{x^2 + y^2} = ?",
         "answer": "z",
@@ -54,7 +54,7 @@ testing_module_questions = [
     },
     {
         "question integer": 6,
-        "title": "Q6",
+        "title": "6",
         "instructions": "find the derivative of the following function",
         "latex": r"\frac{d}{dx} x^2 + 1 = ?",
         "answer": "2x",
